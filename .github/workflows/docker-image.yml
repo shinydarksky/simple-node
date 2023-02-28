@@ -22,10 +22,10 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_ACCESS_TOKEN }}
       - name: Check verion docker
-        uses: docker --version # print the version for logging
+        run: docker --version # print the version for logging
       - name: Build image
-        uses: docker build -t simple-node .
+        run: docker build -t simple-node .
       - name: Tag for image to push
-        uses: docker tag simple-node locnt21092/simple-node:latest
+        run: docker tag simple-node locnt21092/simple-node:latest
       - name: Push image to docker hub
-        uses: docker push locnt210920/simple-node
+        run: docker push locnt210920/simple-node
