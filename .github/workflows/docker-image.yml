@@ -24,7 +24,7 @@ jobs:
       - name: Check verion docker
         run: docker --version # print the version for logging
       - name: Build image
-        run: docker build -t simple-node .
+        run: docker build -t simple-node ../
       - name: Tag for image to push
         run: docker tag simple-node locnt21092/simple-node:latest
       - name: Push image to docker hub
