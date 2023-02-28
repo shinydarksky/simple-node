@@ -36,4 +36,4 @@ jobs:
           file: ./Dockerfile
           builder: ${{ steps.buildx.outputs.name }}
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/flask-helloworld
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/simple-node
