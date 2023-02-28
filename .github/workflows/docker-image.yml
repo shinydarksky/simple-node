@@ -24,4 +24,6 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKERHUB_ACCESSTOKEN }}
 
+      - run: console.log("hello")
+
     
